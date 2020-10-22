@@ -12,7 +12,8 @@ import mutagen  # audio metadata module
 
 parser = argparse.ArgumentParser(description=
 	'Script for building the track and playlist database '
-	'for the iPod shuffle 4g.')
+	'for the iPod shuffle 4g.'
+        'NOTE: Only lower 127 ascii filename allowed.')
 parser.add_argument('mount_path', help='mount path of the iPod')
 parser.add_argument('-vo', action='store_true', help='generate voice-overs for tracks and playlists')
 parser.add_argument('-tts', choices=('svox', 'espeak'), help='generate voice-overs using specified tts provider')
